@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sign_up_nav_graph"
+    app:startDestination="@id/email_fragment">
+
+    <fragment
+        android:id="@+id/email_fragment"
+        android:name="com.example.viewmodellivedata.ui.view.EmailFragment"
+        tools:layout="@layout/email_fragment">
+        <action
+            android:id="@+id/action_email_fragment_to_name_fragment"
+            app:destination="@id/name_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/name_fragment"
+        android:name="com.example.viewmodellivedata.ui.view.NameFragment"
+        tools:layout="@layout/name_fragment">
+        <action
+            android:id="@+id/action_name_fragment_to_setup_complete_fragment"
+            app:destination="@id/sign_up_complete_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/sign_up_complete_fragment"
+        android:name="com.example.viewmodellivedata.ui.view.SignUpCompleteFragment"
+        tools:layout="@layout/sign_up_complete_fragment" />
+
+
+</navigation>
